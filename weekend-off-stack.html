@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Weekend Off Stack — Get Your Sundays Back</title>
+<meta name="description" content="3 Claude Skills that replace Sunday open houses, weekend buyer texts, and Monday-morning followup scramble. Paste-ready prompts.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Source Serif 4', Georgia, serif; background: #F0EEE6; color: #1F1F1C; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  .container { max-width: 760px; margin: 0 auto; padding: 64px 28px 96px; }
+  .top-mark {
+    display: flex; align-items: center; justify-content: center; gap: 12px;
+    font-family: 'Inter', sans-serif; font-weight: 600; font-size: 13px;
+    letter-spacing: 0.42em; color: #CC785C; text-transform: uppercase; margin-bottom: 28px;
+  }
+  .top-mark::before, .top-mark::after { content: ''; width: 36px; height: 2px; background: #CC785C; }
+  h1 {
+    font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 60px;
+    line-height: 1.05; letter-spacing: -0.025em; text-align: center; margin-bottom: 18px;
+  }
+  h1 .accent { color: #CC785C; font-style: italic; }
+  .tagline { text-align: center; font-size: 22px; color: rgba(31,31,28,0.7); margin-bottom: 48px; max-width: 600px; margin-left: auto; margin-right: auto; font-style: italic; }
+  .intro {
+    background: #FAF7EE; border: 1px solid rgba(204,120,92,0.30); border-radius: 6px;
+    padding: 28px 32px; margin-bottom: 56px; font-size: 18px;
+  }
+  .intro p { margin-bottom: 14px; } .intro p:last-child { margin-bottom: 0; }
+  .intro strong { color: #CC785C; font-weight: 600; }
+  .skill {
+    margin-top: 56px; padding-top: 48px;
+    border-top: 1px solid rgba(31,31,28,0.12);
+  }
+  .skill:first-of-type { border-top: none; padding-top: 8px; }
+  .skill-num {
+    font-family: 'DM Serif Display', serif; font-style: italic; font-size: 52px;
+    color: #CC785C; line-height: 1; letter-spacing: -0.03em; margin-bottom: 8px;
+  }
+  h2 {
+    font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 38px;
+    line-height: 1.18; letter-spacing: -0.015em; margin-bottom: 8px;
+  }
+  .when {
+    font-family: 'Inter', sans-serif; font-weight: 700; font-size: 12px;
+    letter-spacing: 0.30em; text-transform: uppercase;
+    color: #CC785C; margin-bottom: 20px;
+  }
+  .skill-tag { font-style: italic; color: rgba(31,31,28,0.65); margin-bottom: 14px; font-size: 19px; }
+  h3 {
+    font-family: 'Inter', sans-serif; font-weight: 700; font-size: 13px;
+    letter-spacing: 0.32em; text-transform: uppercase; color: rgba(31,31,28,0.65);
+    margin-top: 28px; margin-bottom: 12px;
+  }
+  p { font-size: 17px; margin-bottom: 14px; color: rgba(31,31,28,0.92); }
+  pre {
+    background: #1F1F1C; color: #F0EEE6; padding: 26px 28px; border-radius: 6px;
+    font-family: 'JetBrains Mono', monospace; font-size: 13px; line-height: 1.6;
+    white-space: pre-wrap; overflow-x: auto; margin: 14px 0 20px;
+    border-left: 4px solid #CC785C;
+  }
+  .footer-note {
+    margin-top: 80px; padding-top: 32px; border-top: 1px solid rgba(31,31,28,0.12);
+    text-align: center; font-size: 16px; color: rgba(31,31,28,0.6);
+  }
+  .footer-note a { color: #CC785C; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="top-mark">For Realtors &middot; 3 Skills &middot; One day off</div>
+  <h1>The <span class="accent">Weekend Off</span> Stack</h1>
+  <div class="tagline">Three Claude Skills that replaced my Sunday open houses, my weekend buyer texts, and my Monday-morning scramble.</div>
+
+  <div class="intro">
+    <p><strong>The promise:</strong> Run these three Skills consistently for one month and you stop working Sundays. Same clients. Same deals. More sleep.</p>
+    <p><strong>How it works:</strong> Saturday Showing Brief preps every showing in 3 minutes Friday night. Always-On Listing Q&amp;A answers buyer questions while you sleep. Monday Followup Stack pre-drafts your week-start emails by Friday 4pm so you skim-and-send instead of writing-from-scratch.</p>
+    <p><strong>What you need:</strong> Claude (any plan) and 20 minutes to install all three. Save each as a Skill once and you never re-paste these prompts again.</p>
+  </div>
+
+  <div class="skill">
+    <div class="skill-num">01</div>
+    <h2>Saturday <span style="color:#CC785C; font-style:italic;">Showing Brief</span></h2>
+    <div class="when">Run Friday 9pm</div>
+    <p class="skill-tag">A one-page brief per property. So Saturday morning you walk in knowing more than the listing agent.</p>
+
+    <h3>How it works</h3>
+    <p>Friday night, paste tomorrow&rsquo;s addresses + your buyer&rsquo;s budget and timeline. Claude returns one printable brief per property: recent comps, last-sold price, days on market, three features that match THIS buyer, and the one question to ask to learn what they actually want.</p>
+    <p>You walk in prepared. The buyer thinks you spent hours.</p>
+
+    <h3>The prompt</h3>
+<pre>You are my Saturday showing prep assistant. I&rsquo;m showing a buyer
+properties tomorrow morning. Build me a one-page brief PER property
+that I can print and read in the car.
+
+For each address below, produce this exact structure:
+
+ADDRESS LINE 1
+ADDRESS LINE 2
+
+THE QUICK READ (3 lines max)
+- Beds / baths / sqft
+- Listed price / days on market / price changes
+- Last sold (year + price) so I know the seller&rsquo;s position
+
+THREE TALKING POINTS for THIS buyer
+Tie each one to what the buyer told me they care about (see context below).
+Specific, factual, not generic. Skip features that don&rsquo;t match the buyer.
+
+ONE OBJECTION TO PRE-EMPT
+The most likely thing the buyer will say no to. Pre-frame it before they
+bring it up.
+
+ONE QUESTION TO ASK
+After the tour. One open-ended question that surfaces whether this house
+is actually the one, without sounding like a sales close.
+
+Keep each brief under 200 words. Plain English. No real-estate cliches.
+
+BUYER CONTEXT
+- Budget: $___
+- Timeline: ___ (e.g. "needs to be in by Sept", "no rush")
+- Must-haves: ___ (e.g. "ground-floor primary", "fenced yard")
+- Dealbreakers: ___ (e.g. "no HOA over $200/mo")
+- Their words about what they want: ___ (paste a direct quote if you have one)
+
+ADDRESSES TO PREP
+
+1. ___
+2. ___
+3. ___
+4. ___
+</pre>
+
+    <h3>Save it as a Skill</h3>
+    <p>Drop into <code>.claude/skills/saturday-brief/SKILL.md</code> with a one-line frontmatter. Or on Claude.ai web, save as a Project file. Then on Friday night, just say <em>&ldquo;Use Saturday Brief for these 4 addresses,&rdquo;</em> and Claude pulls the rest.</p>
+  </div>
+
+  <div class="skill">
+    <div class="skill-num">02</div>
+    <h2>Always-On <span style="color:#CC785C; font-style:italic;">Listing Q&amp;A</span></h2>
+    <div class="when">Set once per listing</div>
+    <p class="skill-tag">A page per listing that answers buyer questions in your voice 24/7. Cuts the Sunday-night text thread before it starts.</p>
+
+    <h3>How it works</h3>
+    <p>For every new listing, give Claude the property details + your usual buyer FAQ patterns. Claude generates a buyer-facing Q&amp;A page (you host on a free link &mdash; Google Docs, Notion, your IDX site). Put the link in your listing description. Buyer questions get answered at midnight, in your voice, without waking you.</p>
+    <p>The same prompt produces a tab-able document the buyer can browse: "Schools", "HOA", "Yard", "Commute" — each section pre-answered.</p>
+
+    <h3>The prompt</h3>
+<pre>You are building an always-on buyer Q&amp;A page for one of my listings.
+It will live as a public link. Buyers browse it any hour, get answers in
+my voice, and only contact me when they&rsquo;re ready to schedule a showing.
+
+Generate the page in plain HTML I can paste into Google Docs, Notion, or
+my site. Use these sections only (skip any that don&rsquo;t apply):
+
+1. THE 30-SECOND SUMMARY
+2. SCHOOLS &amp; ZONING
+3. HOA / CONDO / TAXES
+4. RECENT WORK &amp; INSPECTIONS
+5. LAYOUT &amp; SQUARE FOOTAGE
+6. NEIGHBORHOOD &amp; COMMUTE
+7. SHOWING &amp; OFFER PROCESS
+
+Rules:
+- Every answer is a direct sentence. No "stunning", "must-see", "perfect".
+- If a question doesn&rsquo;t have data, write "Ask agent &mdash; numbers vary".
+  Never make up specifics.
+- Fair Housing safe. Describe property + geography, not buyers.
+- End with: "Ready to see it? Reply to the listing or text [my number]."
+
+LISTING DETAILS
+- Address: ___
+- Listed price: ___
+- Beds / baths / sqft / lot: ___
+- Year built / last renovated: ___
+- HOA / taxes / utilities: ___
+- Recent work: ___
+- School district: ___
+- Anything unusual (easement, history, etc.): ___
+
+MY VOICE (paste your Voice Manifest here if you have one, or list:
+- 3 phrases you use
+- 3 phrases you never use
+- Your typical closing line
+)
+</pre>
+
+    <h3>Where to put the page</h3>
+    <p>Cheapest path: paste output into a public Google Doc, copy the link, drop the link into your listing description ("Full Q&amp;A: [link]"). Buyers tour the document at 11pm. You get a notification only when they hit "Reply to the listing."</p>
+  </div>
+
+  <div class="skill">
+    <div class="skill-num">03</div>
+    <h2>Monday <span style="color:#CC785C; font-style:italic;">Followup Stack</span></h2>
+    <div class="when">Auto-drafted by Sunday night</div>
+    <p class="skill-tag">Every Saturday showing becomes a Monday-morning email by Sunday night. You skim and send in 12 minutes.</p>
+
+    <h3>How it works</h3>
+    <p>After each showing, paste two lines into Claude: address + your one-sentence read on what the buyer said. By Sunday night, Claude has a Monday email pre-drafted per buyer with the right follow-up move: send-more-listings, offer-strategy, or close-the-loop-and-stay-warm. You skim, edit one line, send.</p>
+
+    <h3>The prompt</h3>
+<pre>You are my Monday-morning followup writer. After Saturday showings, I
+paste my read of each buyer below. Generate ONE email per buyer to send
+Monday at 8am, in my voice.
+
+The email must do all four:
+1. Reference something specific from THIS Saturday&rsquo;s tour (not generic)
+2. Surface the buyer&rsquo;s next decision point (more homes? offer? wait?)
+3. Give them ONE action to take this week
+4. Keep me visible without sounding desperate
+
+Email length: 5-7 sentences. Subject line: 5 words max, no emojis.
+
+For each buyer, classify the followup type and write accordingly:
+- HOT: ready to offer. Email opens an offer conversation.
+- WARM: liked one but not committed. Email proposes next 2 showings.
+- COOL: nothing clicked. Email keeps me top-of-mind without nagging.
+- COLD-LIST: not really buying yet. Bi-weekly market note instead.
+
+Format your output as:
+
+=== BUYER 1: [Name] ===
+TYPE: HOT / WARM / COOL / COLD-LIST
+SUBJECT: ___
+BODY:
+___
+
+=== BUYER 2: ... ===
+(same structure, repeat)
+
+SATURDAY READS
+
+Buyer 1: ___ [name, one-line your honest read]
+Buyer 2: ___
+Buyer 3: ___
+</pre>
+
+    <h3>The Sunday rhythm</h3>
+    <p>Sunday 7pm: paste your reads (60 seconds). Sunday 7:02pm: emails are drafted. Skim, fix one line per email, schedule for Monday 8am. Total: 12 minutes. Sunday 7:15pm: you&rsquo;re done.</p>
+  </div>
+
+  <div class="footer-note">
+    Built by <a href="https://instagram.com/opsbuiltdifferent">@opsbuiltdifferent</a> &middot; Free to use, free to share &middot; Reply on IG and tell me which Skill bought back your first Sunday.
+  </div>
+</div>
+</body>
+</html>
