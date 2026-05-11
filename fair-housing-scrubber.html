@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Fair Housing Scrubber — Don't Lose $26K Over a Listing</title>
+<meta name="description" content="Paste any listing. Get flagged phrases and compliant rewrites in 30 seconds. The Claude Skill realtors use before they hit publish.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Source Serif 4', Georgia, serif; background: #F0EEE6; color: #1F1F1C; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  .container { max-width: 760px; margin: 0 auto; padding: 64px 28px 96px; }
+  .top-mark {
+    display: flex; align-items: center; justify-content: center; gap: 12px;
+    font-family: 'Inter', sans-serif; font-weight: 600; font-size: 13px;
+    letter-spacing: 0.42em; color: #CC785C; text-transform: uppercase; margin-bottom: 28px;
+  }
+  .top-mark::before, .top-mark::after { content: ''; width: 36px; height: 2px; background: #CC785C; }
+  h1 {
+    font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 60px;
+    line-height: 1.05; letter-spacing: -0.025em; text-align: center; margin-bottom: 18px;
+  }
+  h1 .accent { color: #CC785C; font-style: italic; }
+  .tagline { text-align: center; font-size: 22px; color: rgba(31,31,28,0.7); margin-bottom: 48px; max-width: 600px; margin-left: auto; margin-right: auto; font-style: italic; }
+  .intro {
+    background: #FAF7EE; border: 1px solid rgba(204,120,92,0.30); border-radius: 6px;
+    padding: 28px 32px; margin-bottom: 56px; font-size: 18px;
+  }
+  .intro p { margin-bottom: 14px; } .intro p:last-child { margin-bottom: 0; }
+  .intro strong { color: #CC785C; font-weight: 600; }
+  h2 {
+    font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 36px;
+    line-height: 1.2; letter-spacing: -0.015em; margin-bottom: 14px; margin-top: 48px;
+  }
+  h2 .accent { color: #CC785C; font-style: italic; }
+  h3 {
+    font-family: 'Inter', sans-serif; font-weight: 700; font-size: 13px;
+    letter-spacing: 0.32em; text-transform: uppercase; color: rgba(31,31,28,0.65);
+    margin-top: 32px; margin-bottom: 14px;
+  }
+  p { font-size: 18px; margin-bottom: 16px; color: rgba(31,31,28,0.92); }
+  ul { padding-left: 24px; margin-bottom: 18px; font-size: 18px; }
+  li { margin-bottom: 8px; }
+  pre {
+    background: #1F1F1C; color: #F0EEE6; padding: 28px 30px; border-radius: 6px;
+    font-family: 'JetBrains Mono', monospace; font-size: 14px; line-height: 1.6;
+    white-space: pre-wrap; overflow-x: auto; margin: 18px 0 24px;
+    border-left: 4px solid #CC785C;
+  }
+  .step {
+    background: #FAF7EE; border-radius: 6px; padding: 18px 24px; margin-bottom: 12px;
+    border-left: 3px solid #CC785C; font-size: 17px;
+  }
+  .step strong { font-weight: 600; }
+  .legal-warn {
+    background: #FFF4F0; border: 1px solid rgba(204,120,92,0.45); border-radius: 6px;
+    padding: 22px 28px; margin: 24px 0; font-size: 16px;
+    color: rgba(31,31,28,0.85); font-style: italic;
+  }
+  .footer-note {
+    margin-top: 80px; padding-top: 32px; border-top: 1px solid rgba(31,31,28,0.12);
+    text-align: center; font-size: 16px; color: rgba(31,31,28,0.6);
+  }
+  .footer-note a { color: #CC785C; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="top-mark">For Realtors &middot; 30 seconds</div>
+  <h1>The <span class="accent">Fair Housing Scrubber</span></h1>
+  <div class="tagline">Paste any listing. Get flagged phrases and compliant rewrites before you publish.</div>
+
+  <div class="intro">
+    <p><strong>What this does:</strong> Claude reviews your listing copy against all 7 federally protected classes (race, color, national origin, religion, sex, familial status, disability) plus age and source-of-income, which are protected in many states. Returns flagged phrases, the protected class each one touches, and a compliant rewrite that keeps the selling power.</p>
+    <p><strong>Why it matters:</strong> HUD penalties start at <strong>$26,262 per first violation</strong> and rise to $100K+ on repeat violations, plus private suits. Agents are liable for AI-written copy on their listings.</p>
+    <p><strong>What you need:</strong> A listing draft, and 30 seconds before you hit publish.</p>
+  </div>
+
+  <div class="legal-warn">
+    Not legal advice. This Skill is a practical first-pass screen built from HUD &amp; NAR guidance. For anything genuinely uncertain, escalate to your broker or your association's legal hotline.
+  </div>
+
+  <h2>How to <span class="accent">use it</span></h2>
+  <div class="step"><strong>1.</strong> Open Claude. Start a new conversation (or use the saved Skill if you set it up).</div>
+  <div class="step"><strong>2.</strong> Paste the prompt below. Replace the bracketed section with your listing draft.</div>
+  <div class="step"><strong>3.</strong> Claude returns a table: flagged phrase, protected class, why, rewrite.</div>
+  <div class="step"><strong>4.</strong> Accept the rewrites you like. Publish with confidence.</div>
+  <div class="step"><strong>5.</strong> Optional: save the prompt as <code>fair-housing.md</code> under <code>.claude/skills/</code> so every listing draft runs through it automatically.</div>
+
+  <h2>The <span class="accent">prompt</span></h2>
+<pre>You are a Fair Housing compliance reviewer for real estate listings.
+Your job is to catch language that could be interpreted as steering,
+preference, or exclusion under the Fair Housing Act before the listing
+is published.
+
+REVIEW SCOPE
+Check the listing against ALL of:
+  - Race &amp; Color
+  - National Origin (including language preferences)
+  - Religion (houses of worship, "quiet Sundays", etc.)
+  - Sex / Gender (including "bachelor pad", "feminine touch")
+  - Familial Status ("great for kids", "no kids", "adult community")
+  - Disability ("active adults", "must climb stairs", "walk-up only")
+  - Age (explicit or implicit: "young professionals", "mature")
+  - Source of Income (state-protected in CA, NY, NJ, MA and others &mdash;
+    "no Section 8", "income verified", etc.)
+  - Coded neighborhood language (race-proxy descriptors like
+    "exclusive", "private", "established", when paired with
+    neighborhood references)
+
+OUTPUT FORMAT
+Return a markdown table with exactly these columns:
+
+| Flagged phrase | Protected class | Why it's a problem | Compliant rewrite |
+
+If the listing is clean, return: "No Fair Housing issues found. Approved
+for publish."
+
+If issues are found, after the table add a section titled "CLEAN VERSION"
+with the full rewritten listing &mdash; same selling points, no flagged
+language. Preserve the realtor's voice as much as possible.
+
+RULES
+- Describe the property, not the buyer. "Three bedrooms on one level"
+  not "perfect for retirees."
+- Talk about features, not assumed users. "Fenced yard" not "great
+  for kids." "Primary suite on main" not "ideal for active adults."
+- Neighborhood references should describe geography, not demographics.
+  "Walking distance to the village" not "walking distance to St. Mary's."
+- Numbers and physical features are always safe.
+- Tone should match the original. Keep the realtor's voice.
+
+EDGE CASES
+- "Family room" referring to a room layout is fine. "Family-friendly"
+  is not.
+- Square footage, school district names (just the name, not commentary),
+  and price are all fine.
+- "Move-in ready", "turn-key", "well-maintained" are fine.
+
+LISTING TO REVIEW:
+
+[PASTE YOUR LISTING HERE]
+</pre>
+
+  <h2>What a <span class="accent">good catch</span> looks like</h2>
+  <p>Real example from a draft I almost published:</p>
+  <ul>
+    <li><strong>Flagged:</strong> "Walking distance to churches and parks"</li>
+    <li><strong>Class:</strong> Religion</li>
+    <li><strong>Why:</strong> Naming houses of worship can signal religious preference and exclude buyers of other faiths.</li>
+    <li><strong>Rewrite:</strong> "Walking distance to the village center and Memorial Park."</li>
+  </ul>
+  <p>Same information. Same warm feeling. Zero compliance risk.</p>
+
+  <h3>One honest caveat</h3>
+  <p>This Skill catches the common 90%. The other 10% is judgment &mdash; coded language, regional sensitivities, state-specific protections beyond federal. If something feels close to the line, ask your broker.</p>
+
+  <div class="footer-note">
+    Built by <a href="https://instagram.com/opsbuiltdifferent">@opsbuiltdifferent</a> &middot; Free to use, free to share &middot; Reply on IG and tell me what got flagged on your last listing.
+  </div>
+</div>
+</body>
+</html>

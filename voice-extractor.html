@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Voice Extractor — Make Claude Sound Like You</title>
+<meta name="description" content="Paste 5 of your past listings. Get your personal Voice Manifest. Every Claude listing after reads like you wrote it.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Source Serif 4', Georgia, serif; background: #F0EEE6; color: #1F1F1C; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  .container { max-width: 760px; margin: 0 auto; padding: 64px 28px 96px; }
+  .top-mark {
+    display: flex; align-items: center; justify-content: center; gap: 12px;
+    font-family: 'Inter', sans-serif; font-weight: 600; font-size: 13px;
+    letter-spacing: 0.42em; color: #CC785C; text-transform: uppercase; margin-bottom: 28px;
+  }
+  .top-mark::before, .top-mark::after { content: ''; width: 36px; height: 2px; background: #CC785C; }
+  h1 {
+    font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 60px;
+    line-height: 1.05; letter-spacing: -0.025em; text-align: center; margin-bottom: 18px;
+  }
+  h1 .accent { color: #CC785C; font-style: italic; }
+  .tagline { text-align: center; font-size: 22px; color: rgba(31,31,28,0.7); margin-bottom: 48px; max-width: 600px; margin-left: auto; margin-right: auto; font-style: italic; }
+  .intro {
+    background: #FAF7EE; border: 1px solid rgba(204,120,92,0.30); border-radius: 6px;
+    padding: 28px 32px; margin-bottom: 56px; font-size: 18px;
+  }
+  .intro p { margin-bottom: 14px; } .intro p:last-child { margin-bottom: 0; }
+  .intro strong { color: #CC785C; font-weight: 600; }
+  h2 {
+    font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 36px;
+    line-height: 1.2; letter-spacing: -0.015em; margin-bottom: 14px; margin-top: 48px;
+  }
+  h2 .accent { color: #CC785C; font-style: italic; }
+  h3 {
+    font-family: 'Inter', sans-serif; font-weight: 700; font-size: 13px;
+    letter-spacing: 0.32em; text-transform: uppercase; color: rgba(31,31,28,0.65);
+    margin-top: 32px; margin-bottom: 14px;
+  }
+  p { font-size: 18px; margin-bottom: 16px; color: rgba(31,31,28,0.92); }
+  ul { padding-left: 24px; margin-bottom: 18px; font-size: 18px; }
+  li { margin-bottom: 8px; }
+  pre {
+    background: #1F1F1C; color: #F0EEE6; padding: 28px 30px; border-radius: 6px;
+    font-family: 'JetBrains Mono', monospace; font-size: 14px; line-height: 1.6;
+    white-space: pre-wrap; overflow-x: auto; margin: 18px 0 24px;
+    border-left: 4px solid #CC785C;
+  }
+  .step {
+    background: #FAF7EE; border-radius: 6px; padding: 18px 24px; margin-bottom: 12px;
+    border-left: 3px solid #CC785C; font-size: 17px;
+  }
+  .step strong { font-weight: 600; }
+  .footer-note {
+    margin-top: 80px; padding-top: 32px; border-top: 1px solid rgba(31,31,28,0.12);
+    text-align: center; font-size: 16px; color: rgba(31,31,28,0.6);
+  }
+  .footer-note a { color: #CC785C; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="top-mark">For Realtors &middot; 90 seconds</div>
+  <h1>The <span class="accent">Voice Extractor</span></h1>
+  <div class="tagline">One prompt. Five of your past listings. Your personal Voice Manifest, saved as a Skill.</div>
+
+  <div class="intro">
+    <p><strong>What this does:</strong> Claude reads 5 listings you wrote yourself, then extracts the patterns that make your writing yours &mdash; sentence length, the phrases you actually use, the words you never use, your closing pattern. The output is a Voice Manifest you save as a Claude Skill.</p>
+    <p><strong>Why it works:</strong> default Claude writes in the average realtor's voice. After this Skill is saved, Claude reads your Voice Manifest at the start of every listing task and writes the way you write.</p>
+    <p><strong>What you need:</strong> 5 listings you wrote before AI (or your best ones since), and 90 seconds.</p>
+  </div>
+
+  <h2>How to <span class="accent">use it</span></h2>
+  <div class="step"><strong>1.</strong> Open Claude. Start a new conversation.</div>
+  <div class="step"><strong>2.</strong> Paste the prompt below. Replace the bracketed sections with your 5 listings.</div>
+  <div class="step"><strong>3.</strong> Claude returns your Voice Manifest. Copy it.</div>
+  <div class="step"><strong>4.</strong> Save it as a Skill: create a file <code>voice.md</code>, paste the Manifest, save under your <code>.claude/skills/</code> folder (or attach it as a Project knowledge file).</div>
+  <div class="step"><strong>5.</strong> From now on, when you ask Claude to write a listing, it reads the Manifest first and writes in your voice.</div>
+
+  <h2>The <span class="accent">prompt</span></h2>
+<pre>You are going to extract my personal writing voice from 5 listings I wrote.
+Your output will be saved as a Claude Skill called "voice.md" so that every
+future listing I write with you reads in MY voice, not in the generic
+realtor average.
+
+Read the 5 listings below carefully. Then produce a Voice Manifest with
+exactly these sections, in this order:
+
+1. SEVEN VOICE RULES
+   The seven things that consistently characterize how I write. Be
+   specific and observable. Example rule format:
+   - "Opens with a sensory or spatial detail, never with the bedroom count"
+   - "Sentences average 12-16 words; uses fragments for emphasis"
+   - "Second person ('you') used sparingly, only for closing"
+   - "Never uses 'stunning', 'must-see', 'gem', 'oasis', 'sanctuary'"
+
+2. FIVE PHRASES I ACTUALLY USE
+   Direct quotes or paraphrased patterns that appear across multiple
+   listings. Show the exact wording.
+
+3. FIVE PHRASES I NEVER USE
+   Words and phrases conspicuously absent from my writing &mdash; especially
+   the AI-tells: "stunning", "nestled", "boasts", "showcases", "tranquil",
+   "must-see", "true gem", "well-appointed", "perfectly situated", etc.
+   List the 5 most relevant ones I avoid.
+
+4. MY CLOSING PATTERN
+   How my listings end. Do I close with a CTA? An understatement? A
+   neighborhood reference? Pull the pattern out as a one-line rule.
+
+5. ONE-LINE VOICE SUMMARY
+   A single sentence another writer could use to sound like me.
+   Format: "Write like a realtor who [X], who [Y], and who never [Z]."
+
+After the Manifest, give me a SAMPLE rewrite: take a generic 3-sentence
+listing description (3 bedrooms, updated kitchen, fenced yard, good
+neighborhood) and rewrite it in my voice, so I can see the Manifest
+working before I save it.
+
+Be honest. If two listings are noticeably different in voice, flag it
+and ask me which one is more "me". Do not invent rules I don't follow.
+
+HERE ARE THE 5 LISTINGS:
+
+[LISTING 1]
+Paste your first listing here, full text.
+
+[LISTING 2]
+Paste your second listing here, full text.
+
+[LISTING 3]
+Paste your third listing here, full text.
+
+[LISTING 4]
+Paste your fourth listing here, full text.
+
+[LISTING 5]
+Paste your fifth listing here, full text.
+</pre>
+
+  <h2>After you <span class="accent">save it</span></h2>
+  <p>Every time you want a listing, tell Claude: <em>"Write a listing for [address / property notes]. Use my voice from voice.md."</em></p>
+  <p>If you use Claude Code, drop <code>voice.md</code> into <code>.claude/skills/voice/SKILL.md</code> with a one-line frontmatter description, and Claude will auto-load it whenever the conversation touches listings.</p>
+  <p>If you're on Claude.ai (web), attach <code>voice.md</code> as a Project file. Same effect.</p>
+
+  <h3>One honest caveat</h3>
+  <p>The Manifest is only as good as the 5 listings you paste in. If you pick your weakest 5, you'll get an average voice. Pick the listings you'd be proud to show a peer. That's the voice worth saving.</p>
+
+  <div class="footer-note">
+    Built by <a href="https://instagram.com/opsbuiltdifferent">@opsbuiltdifferent</a> &middot; Free to use, free to share &middot; Reply on IG and tell me the first phrase Claude flagged as &ldquo;yours.&rdquo;
+  </div>
+</div>
+</body>
+</html>
